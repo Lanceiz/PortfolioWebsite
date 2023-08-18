@@ -9,13 +9,19 @@
 </head>
 <body>
     
+    <div id="loader">
+      <h1 class="reveal"><span>Hello</span> <span>World</span> <span>I</span> <span>am</span></h1>
+    </div>
+    <div class="cursor"></div> 
+    <div class="cursor2"></div>
+
     <div id="wrapper">
 
         <div class="container">
             <div class="navbar">
                 
                 <div class="logo-container">
-                    <img src="./images/userAsset/NavLogo2.jpg" class="logo">
+                  <img src="./images/userAsset/NavLogo2.jpg" class="logo">
                     <div class="logo-text">tul Singh</div>
                 </div>
                 
@@ -29,10 +35,10 @@
 
             <div class="hero-section">
 
-                <div class="faded-text">Atul Singh</div>
+                <!-- <div class="faded-text">Atul Singh</div> -->
     
                 <div class="hero-section-left">
-                    <div class="hero-section-heading">Hi! I am Atul Singh</div>
+                    <div class="hero-section-heading">Atul Singh!</div>
                     
                     <div class="hero-section-heading hero-section-sub-heading">
                         I am a <span class="role"></span>
@@ -43,7 +49,7 @@
                         learn about my journey as a software developer.
                     </div>
                     
-                    <div class="btn-pink" id="btn">Hire me</div>
+                    <div class="btn-pink" id="btn"><a href="#contactme">Hire me</a></div>
     
                 </div>
     
@@ -67,8 +73,13 @@
                         <img src="./images/userAsset/atul.png" alt="" />
                       </div>
                 </div>
-    
+                <div id="scroll-d">Scroll Down ↓</div>
             </div>
+            
+        </div>
+
+        <div id="page2">
+          <h1>  I BUILD BEAUTIFUL WEBSITES</h1>   
         </div>
 
         <div class="project-section" id="projects">
@@ -343,5 +354,20 @@
       backDelay: 1000,
     });
   </script>
+
+  
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
 </body>
 </html>
