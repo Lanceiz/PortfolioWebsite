@@ -1,20 +1,26 @@
+@font-face{
+  font-family: head;
+  src: url(./Heading-Now-Variable.ttf);
+}
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dancing+Script&family=Montserrat:ital,wght@0,400;0,900;1,400&family=Ubuntu&display=swap');
 
 *{
   margin:0;
   padding:0;
   /* box-sizing:border-box; */
   font-family: "Be Vietnam Pro", sans-serif;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 :root {
-  --bgOrange: #e84949;
+  --bgOrange: #1f99d1;
 }
 
 #wrapper{
     height:100vh;
     overflow-y:auto;
     overflow-x: hidden;
+    /* background: linear-gradient(120deg, #ff4081, #81d4fa); */
 }
 
 .container{
@@ -26,7 +32,6 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
-
     padding-top:1rem;
 }
 
@@ -42,7 +47,7 @@
 
 .logo-text{
     margin-left:-1.2rem;
-    font-size:28px;
+    font-size:35px;
 }
 
 .nav-items{
@@ -63,9 +68,9 @@
 }
 
 a{
+  color:black;
     text-decoration: none;
 }
-
 
 .nav-items div:hover{
     transition:0.8s;
@@ -77,7 +82,6 @@ a{
     display:flex;
     justify-content: center;
     align-items: center;
-
     gap: 5rem;
     margin: 4rem auto;
     padding: 0 1rem;
@@ -89,8 +93,7 @@ a{
     user-select:none;
     font-size: 7em;
     color:rgb(231,231,231);
-    
-    bottom: -16%;
+    bottom: -12%;
     left: -5%;
     font-weight: bold;
     transition: all 3s;
@@ -123,7 +126,9 @@ a{
 .hero-section-description{
     margin-top: 1rem;
     width: 70%;
+    font-size: 1rem;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn-pink {
@@ -159,6 +164,7 @@ a{
   .btn-pink:hover {
     border: solid 3px var(--bgOrange);
     color: black;
+    transform: scale(1.2);
   }
 
   .hero-section-right{
@@ -549,7 +555,7 @@ a{
   font-style:bold;
   color:rgb(231,231,231);
   bottom:-34.5%;
-  right:-25%;
+  right:-5%;
   user-select:none;
   overflow-y:hidden;
 }
@@ -594,6 +600,16 @@ a{
   margin-top: 1rem;
   width:85%;
   text-align: justify;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#scroll-d{
+    position: absolute;
+    font-size: 20px;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
 }
 
 .skill-subHeading p{
@@ -613,7 +629,7 @@ a{
   
   .contactus-sub-heading{
     font-size:3rem;
-    color:#343d68aa;
+    color:#3e53beaa;
     text-transform: capitalize;
   }
 
@@ -672,7 +688,7 @@ a{
 footer{
     position:relative;
     margin-top:-1px;
-    background-color: #343d68;
+    background: linear-gradient(150deg, #ff4081, #81d4fa);
     padding:5rem;
   }
   
@@ -687,7 +703,8 @@ footer{
   .footer-faded-text{
     position:absolute;
     left:0;
-    bottom:0;color:#535c87;
+    bottom:0;
+    color: #3249bfaa;
     user-select:none;
     font-size:5em;
   }
@@ -695,6 +712,7 @@ footer{
   .link-wrapper{
     display:flex;
     gap:1.2rem;
+    margin-bottom: 30px;
   }
   
   .link-wrapper div a{
@@ -711,3 +729,114 @@ footer{
     display:flex;
     gap:1rem;
   }
+
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the loader is above other content */
+}
+
+#loader{
+  position: absolute;
+  width:100%;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  z-index: 9999;
+}
+
+#loader h1{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%);
+  font-family: Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight:lighter;
+}
+
+#loader h1 span{
+ font-family:'Times New Roman', Times, serif;
+}
+
+.reveal .parent{
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.reveal .parent .child{
+  display: block;
+  /* transform: translateY(50%); */
+}
+
+.child span{
+  display: inline-block;
+}
+
+.logo{
+  width:120px;
+}
+
+.cursor {
+  z-index: 9;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease; 
+  background-color: #50aaf3;
+  filter: blur(100px);
+}
+
+
+.cursor2 {
+  z-index: 9;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease; 
+}
+
+.cursor {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #4E46D5;
+  border-radius: 50%;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  background-color: #3579ef;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+#page2{
+  width:100%;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#page2 h1{
+  color: #4E46D5;
+  font-size: 40vw;
+  font-family: head;
+  white-space: nowrap;
+  font-stretch: 260%;
+  font-weight: 999;
+  padding-bottom: 100px;
+}
